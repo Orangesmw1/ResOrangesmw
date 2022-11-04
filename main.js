@@ -21,16 +21,21 @@ function getInfo() {
         alert("Please fill your Password in the form");
     } else if(inputRepeatPasswordRegister.value === "") {
         alert("Please fill your Password in the form");
-    } else 
-    if(checkBox.checked === false) {
-        alert("Accept the terms to continue");
-    } else {
-        listRegisterAccount.push(infoUser);
-        localStorage.setItem("listRegisterAccount",JSON.stringify(listRegisterAccount));
+    }  
+    
+    if(inputRepeatPasswordRegister.value !== inputPasswordRegister.value) {
+        alert("Repeated password is incorrect");
+    } else if(checkBox.checked === false) {
+            alert("Accept the terms to continue");
+        } else {
+            listRegisterAccount.push(infoUser);
+            localStorage.setItem("listRegisterAccount",JSON.stringify(listRegisterAccount));
+            resetInput();
+            alert("You have successfully registered an account");
+        }   
 
-        resetInput();
-        alert("You have successfully registered an account");
-    }   
+
+    
 
 }
 
