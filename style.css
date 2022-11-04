@@ -67,9 +67,6 @@ section {
 
 }
 
-.form-outline input {
-    font-size: 1.2rem;
-}
 
 .form-outline input.form-control.form-control-lg {
     border-radius: 0 !important;
@@ -77,7 +74,8 @@ section {
     transition: all ease-in-out 0.2s;
     background-color: rgba(0, 0, 0, 0.505);
     color: #fff;
-
+    font-size: 1.2rem;
+    font-family: 'Josefin Slab', serif;
 
 }
 
@@ -97,6 +95,39 @@ section {
     border: none !important;
     box-shadow: none !important;
 }
+
+
+.formPassWordRegister span {
+    position: absolute;
+    right: 5%;
+    top: 33%;
+
+}
+
+.formPassWordRegister span i {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.formPassWordRegister span i:hover {
+    cursor: pointer;
+}
+
+.formRepeatPassWordRegister span {
+    position: absolute;
+    right: 5%;
+    top: 33%;
+}
+
+.formRepeatPassWordRegister span i {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.formRepeatPassWordRegister span i:hover {
+    cursor: pointer;
+}
+
 
 .form-outline label {
     position: absolute;

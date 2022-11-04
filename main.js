@@ -3,7 +3,27 @@ var inputEmailRegister = document.querySelector("#inputEmailRegister");
 var inputPasswordRegister = document.querySelector("#inputPasswordRegister");
 var inputRepeatPasswordRegister = document.querySelector("#inputRepeatPasswordRegister");
 var checkBox = document.querySelector("#checkBox");
+
+var showPassword = document.querySelector(".showPassword")
+var hidePassword = document.querySelector(".hidePassword");
+var blockEyes = document.querySelector("#block-eyes");
+
+var showRepeatPassword = document.querySelector(".showRepeatPassword")
+var hideRepeatPassword = document.querySelector(".hideRepeatPassword");
+var blockEyesRepeat = document.querySelector("#block-eyes-repeat");
+
 var listRegisterAccount = [];
+
+
+hidePassword.style = `
+    display: none;
+
+`
+
+hideRepeatPassword.style = `
+    display: none;
+
+`
 
 function getInfo() {
     var infoUser = {
@@ -33,10 +53,58 @@ function getInfo() {
             resetInput();
             alert("You have successfully registered an account");
         }   
+}
 
 
-    
 
+function eyesShowPassword() {
+    if(inputPasswordRegister.type === "password") {
+        inputPasswordRegister.type = "text";
+
+        hidePassword.style = `
+            display: block;
+        `
+        showPassword.style = `
+            display: none;
+        `
+    } 
+}
+
+function eyesHidePassword() {
+    if(inputPasswordRegister.type === "text") {
+        inputPasswordRegister.type = "password";
+        hidePassword.style = `
+            display: none; 
+        `
+        showPassword.style = `
+            display: block;
+        `
+    }
+}
+
+function eyesShowRepeatPassword() {
+    if(inputRepeatPasswordRegister.type === "password") {
+        inputRepeatPasswordRegister.type = "text";
+
+        hideRepeatPassword.style = `
+            display: block;
+        `
+        showRepeatPassword.style = `
+            display: none;
+        `
+    } 
+}
+
+function eyesHideRepeatPassword() {
+    if(inputRepeatPasswordRegister.type === "text") {
+        inputRepeatPasswordRegister.type = "password";
+        hideRepeatPassword.style = `
+            display: none; 
+        `
+        showRepeatPassword.style = `
+            display: block;
+        `
+    }
 }
 
 function resetInput() {
