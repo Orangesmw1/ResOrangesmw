@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+    background: url(./image/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.overlay-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.449);
+    z-index: 1;
+}
+
+section {
+    z-index: 100;
+}
+
+.form-register-title {
+    font-size: 2.5rem;
+    color: #fff;
+    letter-spacing: 9px;
+    text-shadow: 4px 4px 3px rgb(244, 160, 129);
+    word-spacing: 4px;
+    font-weight: 500;
+    font-family: 'Josefin Slab', serif;
+}
+
+.block-card {
+    width: 75%;
+    background-color:rgba(255, 255, 255, 0.203);
+    border-radius: 15px;
+
+}
+
+.card-body form h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 1.5em;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 4px #000;
+}
+
+.form-outline input.form-control.form-control-lg {
+    border-radius: 0 !important;
+    border: none;
+    transition: all ease-in-out 0.2s;
+    background-color: rgba(0, 0, 0, 0.505);
+    color: #fff;
+
+
+}
+
+.form-outline input::placeholder {
+    color: rgb(182, 178, 178) !important;
+    font-family: 'Josefin Slab', serif;
+    
+    
+}
+
+.form-outline input:focus-visible {
+    outline:rgb(244, 160, 129) solid 3.5px;
+
+}
+
+.form-outline input:focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+
+.card {
+    background-color: transparent;
+}
+
+.form-check {
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.text-body u {
+    color: rgb(244, 160, 129);
+}
+
+.register .text-body {
+    font-size: 1.5rem;
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
+    color: #fff !important;
+    background-color: rgba(0, 0, 0, 0.505);
+    transition: all linear 0.3s;
+    border: 3px solid transparent !important ;
+    padding: 10px 90px;
+    border-radius: 0;
+}
+
+.register .text-body:focus {
+    box-shadow: none;
+}
+
+.register .text-body:hover {
+    border: 3px solid rgb(244, 160, 129) !important ;
+
+}
+
+.login-here {
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.login-here a u {
+    color: rgb(244, 160, 129);
+}
+
+.block-img {
+    width: 50%;
+}
+
+.block-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 70vh;
+}
+
+footer {
+    z-index: 100;
+    color: #fff;
+    font-family: 'Josefin Slab', serif;
+}
+
+footer .copyright {
+    font-weight: bold !important;
+    font-size: 1.3rem;
+}
+
+footer .copyright a {
+    text-decoration: none;
+    color: rgb(244, 160, 129);
+
+}
