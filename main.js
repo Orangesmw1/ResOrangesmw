@@ -12,6 +12,9 @@ var showRepeatPassword = document.querySelector(".showRepeatPassword")
 var hideRepeatPassword = document.querySelector(".hideRepeatPassword");
 var blockEyesRepeat = document.querySelector("#block-eyes-repeat");
 
+var enterBtnLogin = document.querySelector(".enter-btn-login");
+
+
 var listRegisterAccount = [];
 
 
@@ -24,6 +27,8 @@ hideRepeatPassword.style = `
     display: none;
 
 `
+
+// Get Info Register 
 
 function getInfo() {
     var infoUser = {
@@ -47,15 +52,31 @@ function getInfo() {
         alert("Repeated password is incorrect");
     } else if(checkBox.checked === false) {
             alert("Accept the terms to continue");
+    } else if(checkBox.checked === true ) {
+        if(inputRepeatPasswordRegister.value === "") {
+            alert("Nhập lại");
+        } else if (inputEmailRegister.value === "") {
+            alert("Nhập lại");
+        } else if(inputNameRegister.value === "") {
+            alert("Nhập lại"); 
+        } else if(inputPasswordRegister.value === "") {
+            alert("Nhập lại");
         } else {
             listRegisterAccount.push(infoUser);
             localStorage.setItem("listRegisterAccount",JSON.stringify(listRegisterAccount));
             resetInput();
-            alert("You have successfully registered an account");
-        }   
+        }
+         
+
+    }
+
+    
+    
+
+ 
+       
 }
-
-
+// Show Password 
 
 function eyesShowPassword() {
     if(inputPasswordRegister.type === "password") {
@@ -107,14 +128,62 @@ function eyesHideRepeatPassword() {
     }
 }
 
+// Remove Input 
+
 function resetInput() {
+    // alert("You have successfully registered an account");
+
     inputNameRegister.value = "";
     inputEmailRegister.value = "";
     inputPasswordRegister.value = "";
     inputRepeatPasswordRegister.value = "";
-    checkBox.innerHTML = "";
+    checkBox.checked = false;
 }
 
-function switchLoginPage() {
-    window.location = "../index.html";
+// Enter Login 
+
+if(inputNameRegister) {
+    inputNameRegister.addEventListener("keypress",function(event) {
+        if(event.key === "Enter") {
+            event.preventDefault();
+            enterBtnLogin.click();
+        }
+    })
+} 
+
+if(inputEmailRegister) {
+    inputEmailRegister.addEventListener("keypress",function(event) {
+        if(event.key === "Enter") {
+            event.preventDefault();
+            enterBtnLogin.click();
+        }
+    })
+} 
+
+if(inputPasswordRegister) {
+    inputPasswordRegister.addEventListener("keypress",function(event) {
+        if(event.key === "Enter") {
+            event.preventDefault();
+            enterBtnLogin.click();
+        }
+    })
 }
+
+if (inputRepeatPasswordRegister) {
+    inputRepeatPasswordRegister.addEventListener("keypress",function(event) {
+        if(event.key === "Enter") {
+            event.preventDefault();
+            enterBtnLogin.click();
+        }
+    })
+}
+
+if (checkBox){
+    checkBox.addEventListener("keypress",function(event) {
+        if(event.key === "Enter") {
+            event.preventDefault();
+            enterBtnLogin.click();
+        }
+    })
+}
+
