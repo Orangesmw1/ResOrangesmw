@@ -54,26 +54,21 @@ function getInfo() {
             alert("Accept the terms to continue");
     } else if(checkBox.checked === true ) {
         if(inputRepeatPasswordRegister.value === "") {
-            alert("Nhập lại");
+            alert("Fill in the information");
         } else if (inputEmailRegister.value === "") {
-            alert("Nhập lại");
+            alert("Fill in the information");
         } else if(inputNameRegister.value === "") {
-            alert("Nhập lại"); 
+            alert("Fill in the information"); 
         } else if(inputPasswordRegister.value === "") {
-            alert("Nhập lại");
+            alert("Fill in the information");
         } else {
             listRegisterAccount.push(infoUser);
             localStorage.setItem("listRegisterAccount",JSON.stringify(listRegisterAccount));
+            alert("")
             resetInput();
         }
-         
-
     }
 
-    
-    
-
- 
        
 }
 // Show Password 
