@@ -64,7 +64,7 @@ function getInfo() {
         } else {
             listRegisterAccount.push(infoUser);
             localStorage.setItem("listRegisterAccount",JSON.stringify(listRegisterAccount));
-            alert("")
+            alert("Successful account registration")
             resetInput();
         }
     }
