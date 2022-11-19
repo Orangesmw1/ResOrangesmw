@@ -65,7 +65,9 @@ function getInfo() {
             listRegisterAccount.push(infoUser);
             localStorage.setItem("listRegisterAccount",JSON.stringify(listRegisterAccount));
             alert("Successful account registration");
+
             window.location = "https://orangesmw1.github.io/LoginOrangesmw/";
+
         }
     }
 
